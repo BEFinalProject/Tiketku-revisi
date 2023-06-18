@@ -4,9 +4,7 @@ import com.example.tiketku_finalproject.Model.HistoryTransactionEntity;
 import com.example.tiketku_finalproject.Model.SchedulesEntity;
 import com.example.tiketku_finalproject.Model.TempTransactionEntity;
 import com.example.tiketku_finalproject.Repository.SchedulesRepository;
-import com.example.tiketku_finalproject.Response.CommonResponse;
-import com.example.tiketku_finalproject.Response.CommonResponseGenerator;
-import com.example.tiketku_finalproject.Response.TempAddTransactionResponse;
+import com.example.tiketku_finalproject.Response.*;
 import com.example.tiketku_finalproject.Service.HistoryTransactionService;
 import com.example.tiketku_finalproject.Service.SchedulesService;
 import com.example.tiketku_finalproject.Service.TempTransactionService;
@@ -126,6 +124,55 @@ public class TempTransactionController {
             log.info(String.valueOf(transactionEntities));
             return commonResponseGenerator.succsesResponse(transactionEntities, "Sukses Menambahkan Data");
         } catch (Exception e) {
+            log.warn(String.valueOf(e));
+            return commonResponseGenerator.failedResponse(e.getMessage());
+        }
+    }
+
+    @PutMapping(value = "/checkout")
+    @Operation(description = "Update a temporary transaction to paid status")
+    public CommonResponse<TempTransactionEntity> checkoutTransaction(@RequestBody CheckoutTransactionResponse param){
+        try {
+            TempTransactionEntity tempTransaction = new TempTransactionEntity();
+            tempTransaction.setUuid_transaction(param.getUuid_transaction());
+            tempTransaction.setTitle(param.getTitle());
+            tempTransaction.setFull_name(param.getFull_name());
+            tempTransaction.setGiven_name(param.getGiven_name());
+            tempTransaction.setBirth_date(param.getBirth_date());
+            tempTransaction.setId_card(param.getId_card());
+            TempTransactionEntity tempTransactionEntity = tempTransactionService.updateTempData(tempTransaction);
+
+            HistoryTransactionEntity historyTransaction = new HistoryTransactionEntity();
+            historyTransaction.setUuid_history(tempTransactionEntity.getUuid_transaction());
+            log.info(String.valueOf(historyTransaction));
+            HistoryTransactionEntity saveHistory = historyTransactionService.updateDataHistory(historyTransaction);
+
+            log.info(String.valueOf(tempTransaction));
+            log.info(String.valueOf(tempTransactionEntity), "Successfully updated " + param.getFull_name());
+            return commonResponseGenerator.succsesResponse(tempTransactionEntity, "Successfully updated " + param.getUuid_transaction());
+        }catch (Exception e){
+            log.warn(String.valueOf(e));
+            return commonResponseGenerator.failedResponse(e.getMessage());
+        }
+    }
+
+    @PutMapping(value = "/cancelCheckout")
+    @Operation(description = "Update a temporary transaction to cancel status")
+    public CommonResponse<TempTransactionEntity> cancelCheckout(@RequestBody CancelCheckoutResponse param){
+        try {
+            TempTransactionEntity tempTransaction = new TempTransactionEntity();
+            tempTransaction.setUuid_transaction(param.getUuid_transaction());
+            TempTransactionEntity tempTransactionEntity = tempTransactionService.updateTempData(tempTransaction);
+
+            HistoryTransactionEntity historyTransaction = new HistoryTransactionEntity();
+            historyTransaction.setUuid_history(tempTransactionEntity.getUuid_transaction());
+            log.info(String.valueOf(historyTransaction));
+            HistoryTransactionEntity saveHistory = historyTransactionService.cancelOrder(historyTransaction);
+
+            log.info(String.valueOf(tempTransaction));
+            log.info(String.valueOf(tempTransactionEntity), "Successfully updated " + param.getUuid_transaction());
+            return commonResponseGenerator.succsesResponse(tempTransactionEntity, "Successfully updated status to canceled");
+        }catch (Exception e){
             log.warn(String.valueOf(e));
             return commonResponseGenerator.failedResponse(e.getMessage());
         }

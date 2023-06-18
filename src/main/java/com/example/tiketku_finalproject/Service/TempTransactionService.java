@@ -76,6 +76,17 @@ public class TempTransactionService {
         return savedTransactions;
     }
 
+    public TempTransactionEntity updateTempData(TempTransactionEntity tempTransaction){
+        TempTransactionEntity updatedTempData = tempTransactionRepository.findById(tempTransaction.getUuid_transaction()).get();
+        updatedTempData.setTitle(tempTransaction.getTitle());
+        updatedTempData.setFull_name(tempTransaction.getFull_name());
+        updatedTempData.setGiven_name(tempTransaction.getGiven_name());
+        updatedTempData.setBirth_date(tempTransaction.getBirth_date());
+        updatedTempData.setId_card(tempTransaction.getId_card());
+        updatedTempData.setValid_until(tempTransaction.getDeparture_date());
+        return tempTransactionRepository.save(updatedTempData);
+    }
+
 //    public List<TempTransactionEntity> addTransaction(List<TempTransactionEntity> tempTransactions) {
 //        LocalDateTime currentDateTime = LocalDateTime.now();
 //        List<TempTransactionEntity> savedTransactions = new ArrayList<>();

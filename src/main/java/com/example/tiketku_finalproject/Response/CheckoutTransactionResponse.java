@@ -11,7 +11,7 @@ import java.util.UUID;
 @NoArgsConstructor
 @AllArgsConstructor
 public class CheckoutTransactionResponse {
-    private UUID transaction_uid;
+    private UUID uuid_transaction;
     private String title;
     private String full_name;
     private String given_name;

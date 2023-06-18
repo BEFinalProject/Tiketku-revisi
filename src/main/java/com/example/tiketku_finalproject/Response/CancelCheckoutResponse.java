@@ -10,5 +10,5 @@ import java.util.UUID;
 @NoArgsConstructor
 @AllArgsConstructor
 public class CancelCheckoutResponse {
-    private UUID transaction_uid;
+    private UUID uuid_transaction;
 }

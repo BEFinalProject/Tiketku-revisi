@@ -1,0 +1,101 @@
+2023-06-18T16:35:19.504+07:00  INFO 6252 --- [restartedMain] c.e.t.TiketkuFinalProjectApplication     : Starting TiketkuFinalProjectApplication using Java 17.0.2 with PID 6252 (D:\Materi Kuliah\!Binar Academy MSIB\Ch-8-9 Final Project\Tiketku-revisi-main\target\classes started by ARJ in D:\Materi Kuliah\!Binar Academy MSIB\Ch-8-9 Final Project\Tiketku-revisi-main)
+2023-06-18T16:35:19.513+07:00  INFO 6252 --- [restartedMain] c.e.t.TiketkuFinalProjectApplication     : No active profile set, falling back to 1 default profile: "default"
+2023-06-18T16:35:30.127+07:00  INFO 6252 --- [restartedMain] c.e.t.TiketkuFinalProjectApplication     : Started TiketkuFinalProjectApplication in 11.272 seconds (process running for 12.596)
+2023-06-18T16:38:52.857+07:00  INFO 24368 --- [restartedMain] c.e.t.TiketkuFinalProjectApplication     : Starting TiketkuFinalProjectApplication using Java 17.0.2 with PID 24368 (D:\Materi Kuliah\!Binar Academy MSIB\Ch-8-9 Final Project\Tiketku-revisi-main\target\classes started by ARJ in D:\Materi Kuliah\!Binar Academy MSIB\Ch-8-9 Final Project\Tiketku-revisi-main)
+2023-06-18T16:38:52.860+07:00  INFO 24368 --- [restartedMain] c.e.t.TiketkuFinalProjectApplication     : No active profile set, falling back to 1 default profile: "default"
+2023-06-18T16:39:03.941+07:00  INFO 24368 --- [restartedMain] c.e.t.TiketkuFinalProjectApplication     : Started TiketkuFinalProjectApplication in 11.659 seconds (process running for 12.85)
+2023-06-18T16:39:15.396+07:00  INFO 24368 --- [http-nio-8080-exec-1] c.e.t.Controller.AirplanesController     : AirplanesEntity(airplane_id=CTV-145, airplane_name=Citilink, airplane_type=Airbus 380, created_at=2023-06-18T16:38:59.270329500, modified_at=2023-06-18T16:39:15.385696300)
+2023-06-18T16:39:30.506+07:00  INFO 24368 --- [http-nio-8080-exec-2] c.e.t.Controller.AirplanesController     : AirplanesEntity(airplane_id=CTV-122, airplane_name=Citilink, airplane_type=Boeing 737, created_at=2023-06-18T16:38:59.270329500, modified_at=2023-06-18T16:39:30.505338)
+2023-06-18T16:40:02.195+07:00  INFO 24368 --- [http-nio-8080-exec-3] c.e.t.Controller.AirplanesController     : AirplanesEntity(airplane_id=BTK-143, airplane_name=Batik Air, airplane_type=Airbus 380, created_at=2023-06-16T20:00, modified_at=2023-06-18T16:40:02.191905900)
+2023-06-18T16:40:27.194+07:00  INFO 24368 --- [http-nio-8080-exec-4] c.e.t.Controller.AirplanesController     : AirplanesEntity(airplane_id=CTV-1224, airplane_name=Citilink, airplane_type=Boeing 737, created_at=2023-06-18T16:38:59.270329500, modified_at=2023-06-18T16:40:27.193188)
+2023-06-18T16:41:43.768+07:00  INFO 22904 --- [restartedMain] c.e.t.TiketkuFinalProjectApplication     : Starting TiketkuFinalProjectApplication using Java 17.0.2 with PID 22904 (D:\Materi Kuliah\!Binar Academy MSIB\Ch-8-9 Final Project\Tiketku-revisi-main\target\classes started by ARJ in D:\Materi Kuliah\!Binar Academy MSIB\Ch-8-9 Final Project\Tiketku-revisi-main)
+2023-06-18T16:41:43.770+07:00  INFO 22904 --- [restartedMain] c.e.t.TiketkuFinalProjectApplication     : No active profile set, falling back to 1 default profile: "default"
+2023-06-18T16:41:52.346+07:00  INFO 22904 --- [restartedMain] c.e.t.TiketkuFinalProjectApplication     : Started TiketkuFinalProjectApplication in 9.093 seconds (process running for 10.151)
+2023-06-18T16:42:07.450+07:00  INFO 22904 --- [http-nio-8080-exec-1] c.e.t.Controller.AirplanesController     : AirplanesEntity(airplane_id=CTV-1224, airplane_name=Citilink, airplane_type=Boeing 737, created_at=2023-06-18T16:38:59.270330, modified_at=2023-06-18T16:40:27.193188)
+2023-06-18T16:45:10.241+07:00  INFO 5520 --- [restartedMain] c.e.t.TiketkuFinalProjectApplication     : Starting TiketkuFinalProjectApplication using Java 17.0.2 with PID 5520 (D:\Materi Kuliah\!Binar Academy MSIB\Ch-8-9 Final Project\Tiketku-revisi-main\target\classes started by ARJ in D:\Materi Kuliah\!Binar Academy MSIB\Ch-8-9 Final Project\Tiketku-revisi-main)
+2023-06-18T16:45:10.244+07:00  INFO 5520 --- [restartedMain] c.e.t.TiketkuFinalProjectApplication     : No active profile set, falling back to 1 default profile: "default"
+2023-06-18T16:45:20.537+07:00  INFO 5520 --- [restartedMain] c.e.t.TiketkuFinalProjectApplication     : Started TiketkuFinalProjectApplication in 10.904 seconds (process running for 12.068)
+2023-06-18T16:45:33.422+07:00  INFO 5520 --- [http-nio-8080-exec-9] c.e.t.Controller.AirplanesController     : AirplanesEntity(airplane_id=string, airplane_name=string, airplane_type=string, created_at=2023-06-18T16:45:15.304431100, modified_at=2023-06-18T16:45:33.413050200)
+2023-06-18T16:45:52.888+07:00  INFO 5520 --- [http-nio-8080-exec-1] c.e.t.Controller.AirplanesController     : AirplanesEntity(airplane_id=string, airplane_name=string, airplane_type=string, created_at=2023-06-18T16:45:15.304431, modified_at=2023-06-18T16:45:33.413050)
+2023-06-18T16:47:55.071+07:00  INFO 5520 --- [http-nio-8080-exec-4] c.e.t.Controller.AirportsController      : AirportsEntity(iata_code=DPS, airport_name=I Gusti Ngurah Rai International Airport, created_at=2023-06-18T16:45:15.337647100, modified_at=2023-06-18T16:47:55.065888600, city_code=BL)
+2023-06-18T16:49:09.039+07:00  INFO 5520 --- [http-nio-8080-exec-5] c.e.t.Controller.AirportsController      : AirportsEntity(iata_code=JOG, airport_name=Adisutjipto International Airport, created_at=2023-06-18T16:45:15.337647100, modified_at=2023-06-18T16:49:09.037209, city_code=YG)
+2023-06-18T16:49:19.569+07:00 ERROR 5520 --- [http-nio-8080-exec-10] o.h.engine.jdbc.spi.SqlExceptionHelper   : ERROR: value too long for type character(3)
+2023-06-18T16:49:19.582+07:00  WARN 5520 --- [http-nio-8080-exec-10] c.e.t.Controller.AirportsController      : org.springframework.dao.DataIntegrityViolationException: could not execute statement; SQL [n/a]
+2023-06-18T16:49:23.184+07:00 ERROR 5520 --- [http-nio-8080-exec-8] o.h.engine.jdbc.spi.SqlExceptionHelper   : ERROR: value too long for type character(3)
+2023-06-18T16:49:23.185+07:00  WARN 5520 --- [http-nio-8080-exec-8] c.e.t.Controller.AirportsController      : org.springframework.dao.DataIntegrityViolationException: could not execute statement; SQL [n/a]
+2023-06-18T16:49:31.887+07:00 ERROR 5520 --- [http-nio-8080-exec-9] o.h.engine.jdbc.spi.SqlExceptionHelper   : ERROR: duplicate key value violates unique constraint "airports_city_code_key"
+  Detail: Key (city_code)=(YG   ) already exists.
+2023-06-18T16:49:31.889+07:00  WARN 5520 --- [http-nio-8080-exec-9] c.e.t.Controller.AirportsController      : org.springframework.dao.DataIntegrityViolationException: could not execute statement; SQL [n/a]; constraint [airports_city_code_key]
+2023-06-18T16:49:39.129+07:00  WARN 5520 --- [http-nio-8080-exec-1] c.e.t.Controller.AirportsController      : java.lang.RuntimeException: Iata code JOG already exists
+2023-06-18T16:49:47.723+07:00 ERROR 5520 --- [http-nio-8080-exec-2] o.h.engine.jdbc.spi.SqlExceptionHelper   : ERROR: duplicate key value violates unique constraint "airports_city_code_key"
+  Detail: Key (city_code)=(YG   ) already exists.
+2023-06-18T16:49:47.724+07:00  WARN 5520 --- [http-nio-8080-exec-2] c.e.t.Controller.AirportsController      : org.springframework.dao.DataIntegrityViolationException: could not execute statement; SQL [n/a]; constraint [airports_city_code_key]
+2023-06-18T16:50:23.627+07:00  INFO 5520 --- [http-nio-8080-exec-3] c.e.t.Controller.AirportsController      : AirportsEntity(iata_code=JOG, airport_name=Adisutjipto sdasd International Airport, created_at=2023-06-18T16:45:15.337647, modified_at=2023-06-18T16:50:23.624169300, city_code=YG)
+2023-06-18T16:50:39.217+07:00  INFO 5520 --- [http-nio-8080-exec-6] c.e.t.Controller.AirportsController      : AirportsEntity(iata_code=JOG, airport_name=Adisutjipto sdasd International Airport, created_at=2023-06-18T16:45:15.337647, modified_at=2023-06-18T16:50:23.624169, city_code=YG   )
+2023-06-18T16:50:45.578+07:00  INFO 5520 --- [http-nio-8080-exec-4] c.e.t.Controller.AirportsController      : AirportsEntity(iata_code=ABC, airport_name=Adisutjipto International Airport, created_at=2023-06-18T16:45:15.337647100, modified_at=2023-06-18T16:50:45.577372300, city_code=YG)
+2023-06-18T16:58:31.880+07:00  INFO 13792 --- [restartedMain] c.e.t.TiketkuFinalProjectApplication     : Starting TiketkuFinalProjectApplication using Java 17.0.2 with PID 13792 (D:\Materi Kuliah\!Binar Academy MSIB\Ch-8-9 Final Project\Tiketku-revisi-main\target\classes started by ARJ in D:\Materi Kuliah\!Binar Academy MSIB\Ch-8-9 Final Project\Tiketku-revisi-main)
+2023-06-18T16:58:31.884+07:00  INFO 13792 --- [restartedMain] c.e.t.TiketkuFinalProjectApplication     : No active profile set, falling back to 1 default profile: "default"
+2023-06-18T16:58:41.400+07:00  INFO 13792 --- [restartedMain] c.e.t.TiketkuFinalProjectApplication     : Started TiketkuFinalProjectApplication in 10.351 seconds (process running for 11.793)
+2023-06-18T16:59:00.467+07:00 ERROR 13792 --- [scheduling-1] o.s.s.s.TaskUtils$LoggingErrorHandler    : Unexpected error occurred in scheduled task
+
+org.springframework.dao.InvalidDataAccessApiUsageException: Expecting a SELECT query : `UPDATE SchedulesEntity set limits = 30`
+	at org.springframework.orm.jpa.EntityManagerFactoryUtils.convertJpaAccessExceptionIfPossible(EntityManagerFactoryUtils.java:368) ~[spring-orm-6.0.7.jar:6.0.7]
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.translateExceptionIfPossible(HibernateJpaDialect.java:234) ~[spring-orm-6.0.7.jar:6.0.7]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.translateExceptionIfPossible(AbstractEntityManagerFactoryBean.java:550) ~[spring-orm-6.0.7.jar:6.0.7]
+	at org.springframework.dao.support.ChainedPersistenceExceptionTranslator.translateExceptionIfPossible(ChainedPersistenceExceptionTranslator.java:61) ~[spring-tx-6.0.7.jar:6.0.7]
+	at org.springframework.dao.support.DataAccessUtils.translateIfNecessary(DataAccessUtils.java:242) ~[spring-tx-6.0.7.jar:6.0.7]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:152) ~[spring-tx-6.0.7.jar:6.0.7]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.0.7.jar:6.0.7]
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:134) ~[spring-data-jpa-3.0.4.jar:3.0.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.0.7.jar:6.0.7]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97) ~[spring-aop-6.0.7.jar:6.0.7]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.0.7.jar:6.0.7]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:218) ~[spring-aop-6.0.7.jar:6.0.7]
+	at jdk.proxy4/jdk.proxy4.$Proxy150.resetLimit(Unknown Source) ~[na:na]
+	at com.example.tiketku_finalproject.Service.SchedulesService.resetLimits(SchedulesService.java:60) ~[classes/:na]
+	at com.example.tiketku_finalproject.Schedule.Scheduler.Schedule(Scheduler.java:53) ~[classes/:na]
+	at jdk.internal.reflect.GeneratedMethodAccessor61.invoke(Unknown Source) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:84) ~[spring-context-6.0.7.jar:6.0.7]
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54) ~[spring-context-6.0.7.jar:6.0.7]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305) ~[na:na]
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+Caused by: java.lang.IllegalStateException: Expecting a SELECT query : `UPDATE SchedulesEntity set limits = 30`
+	at org.hibernate.query.sqm.internal.QuerySqmImpl.verifySelect(QuerySqmImpl.java:502) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
+	at org.hibernate.query.sqm.internal.QuerySqmImpl.doList(QuerySqmImpl.java:507) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
+	at org.hibernate.query.spi.AbstractSelectionQuery.list(AbstractSelectionQuery.java:363) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
+	at org.hibernate.query.sqm.internal.QuerySqmImpl.list(QuerySqmImpl.java:1073) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
+	at org.hibernate.query.Query.getResultList(Query.java:94) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.orm.jpa.SharedEntityManagerCreator$DeferredQueryInvocationHandler.invoke(SharedEntityManagerCreator.java:405) ~[spring-orm-6.0.7.jar:6.0.7]
+	at jdk.proxy4/jdk.proxy4.$Proxy170.getResultList(Unknown Source) ~[na:na]
+	at org.springframework.data.jpa.repository.query.JpaQueryExecution$CollectionExecution.doExecute(JpaQueryExecution.java:127) ~[spring-data-jpa-3.0.4.jar:3.0.4]
+	at org.springframework.data.jpa.repository.query.JpaQueryExecution.execute(JpaQueryExecution.java:90) ~[spring-data-jpa-3.0.4.jar:3.0.4]
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.doExecute(AbstractJpaQuery.java:148) ~[spring-data-jpa-3.0.4.jar:3.0.4]
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.execute(AbstractJpaQuery.java:136) ~[spring-data-jpa-3.0.4.jar:3.0.4]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:136) ~[spring-data-commons-3.0.4.jar:3.0.4]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:120) ~[spring-data-commons-3.0.4.jar:3.0.4]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:164) ~[spring-data-commons-3.0.4.jar:3.0.4]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:143) ~[spring-data-commons-3.0.4.jar:3.0.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.0.7.jar:6.0.7]
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:77) ~[spring-data-commons-3.0.4.jar:3.0.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.0.7.jar:6.0.7]
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123) ~[spring-tx-6.0.7.jar:6.0.7]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:391) ~[spring-tx-6.0.7.jar:6.0.7]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-6.0.7.jar:6.0.7]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.0.7.jar:6.0.7]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137) ~[spring-tx-6.0.7.jar:6.0.7]
+	... 20 common frames omitted
+Caused by: org.hibernate.query.IllegalSelectQueryException: Expecting a SELECT Query [org.hibernate.query.sqm.tree.select.SqmSelectStatement], but found org.hibernate.query.sqm.tree.update.SqmUpdateStatement [UPDATE SchedulesEntity set limits = 30]
+	at org.hibernate.query.sqm.internal.SqmUtil.verifyIsSelectStatement(SqmUtil.java:81) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
+	at org.hibernate.query.sqm.internal.QuerySqmImpl.verifySelect(QuerySqmImpl.java:498) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
+	... 46 common frames omitted
+

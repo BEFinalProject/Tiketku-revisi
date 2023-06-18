@@ -1,21 +1,68 @@
-2023-06-17T16:52:54.542+07:00  INFO 32156 --- [http-nio-8080-exec-1] c.e.t.C.TempTransactionController        : [SchedulesEntity(uuid_schedules=a57d6027-98aa-4b9e-a735-5df5b8a17c72, airplane_id=BTK-144   , iata_code=CGK, routes_uid=89b58f73-2f60-4fcf-b147-387b6d478afc, limits=29)]
-2023-06-17T16:52:54.649+07:00  INFO 32156 --- [http-nio-8080-exec-1] c.e.t.C.TempTransactionController        : [TempTransactionEntity(uuid_transaction=092eaff8-2d44-4105-9ba0-f61aa955c3fe, uuid_schedules=a57d6027-98aa-4b9e-a735-5df5b8a17c72, uuid_user=28f0db2d-2ef5-4666-b16e-dd89970a6a3d, passenger=0, airplane_name=null, airplane_type=null, departure_airport=null, arrival_airport=null, departure_city=null, arrival_city=null, departure_date=null, departure_time=null, arrival_date=null, arrival_time=null, price=0, seats_id=1, seat_type=null, title=null, full_name=null, given_name=null, birth_date=null, id_card=null, valid_until=null, created_at=null, modified_at=null)]
-2023-06-17T16:54:42.573+07:00  INFO 32156 --- [http-nio-8080-exec-3] c.e.t.C.TempTransactionController        : [SchedulesEntity(uuid_schedules=a57d6027-98aa-4b9e-a735-5df5b8a17c72, airplane_id=BTK-144   , iata_code=CGK, routes_uid=89b58f73-2f60-4fcf-b147-387b6d478afc, limits=28)]
-2023-06-17T16:54:42.585+07:00  INFO 32156 --- [http-nio-8080-exec-3] c.e.t.C.TempTransactionController        : [SchedulesEntity(uuid_schedules=a57d6027-98aa-4b9e-a735-5df5b8a17c72, airplane_id=BTK-144   , iata_code=CGK, routes_uid=89b58f73-2f60-4fcf-b147-387b6d478afc, limits=27), SchedulesEntity(uuid_schedules=a57d6027-98aa-4b9e-a735-5df5b8a17c72, airplane_id=BTK-144   , iata_code=CGK, routes_uid=89b58f73-2f60-4fcf-b147-387b6d478afc, limits=27)]
-2023-06-17T16:54:42.594+07:00  INFO 32156 --- [http-nio-8080-exec-3] c.e.t.C.TempTransactionController        : [TempTransactionEntity(uuid_transaction=1055a371-e951-4d84-9b78-748df6fa50b8, uuid_schedules=a57d6027-98aa-4b9e-a735-5df5b8a17c72, uuid_user=28f0db2d-2ef5-4666-b16e-dd89970a6a3d, passenger=0, airplane_name=null, airplane_type=null, departure_airport=null, arrival_airport=null, departure_city=null, arrival_city=null, departure_date=null, departure_time=null, arrival_date=null, arrival_time=null, price=0, seats_id=1, seat_type=null, title=null, full_name=null, given_name=null, birth_date=null, id_card=null, valid_until=null, created_at=null, modified_at=null), TempTransactionEntity(uuid_transaction=fd7775ed-64bd-44b4-afeb-8ce614fdd8a5, uuid_schedules=a57d6027-98aa-4b9e-a735-5df5b8a17c72, uuid_user=28f0db2d-2ef5-4666-b16e-dd89970a6a3d, passenger=0, airplane_name=null, airplane_type=null, departure_airport=null, arrival_airport=null, departure_city=null, arrival_city=null, departure_date=null, departure_time=null, arrival_date=null, arrival_time=null, price=0, seats_id=1, seat_type=null, title=null, full_name=null, given_name=null, birth_date=null, id_card=null, valid_until=null, created_at=null, modified_at=null)]
-2023-06-17T18:19:21.541+07:00  INFO 29008 --- [restartedMain] c.e.t.TiketkuFinalProjectApplication     : Starting TiketkuFinalProjectApplication using Java 17.0.2 with PID 29008 (E:\Intellij Project\Tiketku_FinalProject\target\classes started by EnVyx in E:\Intellij Project\Tiketku_FinalProject)
-2023-06-17T18:19:21.545+07:00  INFO 29008 --- [restartedMain] c.e.t.TiketkuFinalProjectApplication     : No active profile set, falling back to 1 default profile: "default"
-2023-06-17T18:19:31.979+07:00  INFO 29008 --- [restartedMain] c.e.t.TiketkuFinalProjectApplication     : Started TiketkuFinalProjectApplication in 11.062 seconds (process running for 12.243)
-2023-06-17T18:21:06.254+07:00  INFO 29008 --- [http-nio-8080-exec-3] c.e.t.C.TempTransactionController        : [SchedulesEntity(uuid_schedules=b9c8c247-1b12-4c5b-837f-6f209415ed5e, airplane_id=BTK-143   , iata_code=CGK, routes_uid=89b58f73-2f60-4fcf-b147-387b6d478afc, limits=29)]
-2023-06-17T18:21:06.344+07:00  WARN 29008 --- [http-nio-8080-exec-3] c.e.t.C.TempTransactionController        : org.springframework.dao.InvalidDataAccessApiUsageException: The given id must not be null
-2023-06-17T18:22:40.619+07:00  INFO 28552 --- [restartedMain] c.e.t.TiketkuFinalProjectApplication     : Starting TiketkuFinalProjectApplication using Java 17.0.2 with PID 28552 (E:\Intellij Project\Tiketku_FinalProject\target\classes started by EnVyx in E:\Intellij Project\Tiketku_FinalProject)
-2023-06-17T18:22:40.623+07:00  INFO 28552 --- [restartedMain] c.e.t.TiketkuFinalProjectApplication     : No active profile set, falling back to 1 default profile: "default"
-2023-06-17T18:22:50.095+07:00  INFO 28552 --- [restartedMain] c.e.t.TiketkuFinalProjectApplication     : Started TiketkuFinalProjectApplication in 10.072 seconds (process running for 11.008)
-2023-06-17T18:22:53.579+07:00  INFO 28552 --- [http-nio-8080-exec-1] c.e.t.C.TempTransactionController        : HistoryTransactionEntity(uuid_history=null, uuid_schedules=null, uuid_user=null, passenger=0, airplane_name=null, airplane_type=null, departure_airport=null, arrival_airport=null, departure_city=null, arrival_city=null, departure_date=null, departure_time=null, arrival_date=null, arrival_time=null, price=0, seat_type=null, title=null, full_name=null, given_name=null, birth_date=null, id_card=null, valid_until=null, status=null, created_at=null, modified_at=null)
-2023-06-17T18:22:53.676+07:00  INFO 28552 --- [http-nio-8080-exec-1] c.e.t.C.TempTransactionController        : [SchedulesEntity(uuid_schedules=b9c8c247-1b12-4c5b-837f-6f209415ed5e, airplane_id=BTK-143   , iata_code=CGK, routes_uid=89b58f73-2f60-4fcf-b147-387b6d478afc, limits=28)]
-2023-06-17T18:22:53.762+07:00  WARN 28552 --- [http-nio-8080-exec-1] c.e.t.C.TempTransactionController        : org.springframework.dao.InvalidDataAccessApiUsageException: The given id must not be null
-2023-06-17T18:44:58.888+07:00  INFO 11564 --- [restartedMain] c.e.t.TiketkuFinalProjectApplication     : Starting TiketkuFinalProjectApplication using Java 17.0.2 with PID 11564 (E:\Intellij Project\Tiketku_FinalProject\target\classes started by EnVyx in E:\Intellij Project\Tiketku_FinalProject)
-2023-06-17T18:44:58.890+07:00  INFO 11564 --- [restartedMain] c.e.t.TiketkuFinalProjectApplication     : No active profile set, falling back to 1 default profile: "default"
-2023-06-17T18:45:05.481+07:00  INFO 11564 --- [restartedMain] c.e.t.TiketkuFinalProjectApplication     : Started TiketkuFinalProjectApplication in 7.017 seconds (process running for 7.797)
-2023-06-17T18:45:11.745+07:00  INFO 11564 --- [http-nio-8080-exec-1] c.e.t.C.TempTransactionController        : [SchedulesEntity(uuid_schedules=b9c8c247-1b12-4c5b-837f-6f209415ed5e, airplane_id=BTK-143   , iata_code=CGK, routes_uid=89b58f73-2f60-4fcf-b147-387b6d478afc, limits=27)]
-2023-06-17T18:45:11.819+07:00  INFO 11564 --- [http-nio-8080-exec-1] c.e.t.C.TempTransactionController        : [TempTransactionEntity(uuid_transaction=f76bec0e-5e9b-4f07-89cc-62b2274bc9a5, uuid_schedules=b9c8c247-1b12-4c5b-837f-6f209415ed5e, uuid_user=28f0db2d-2ef5-4666-b16e-dd89970a6a3d, passenger=0, airplane_name=null, airplane_type=null, departure_airport=null, arrival_airport=null, departure_city=null, arrival_city=null, departure_date=null, departure_time=null, arrival_date=null, arrival_time=null, price=0, seats_id=1, seat_type=null, title=null, full_name=null, given_name=null, birth_date=null, id_card=null, valid_until=null, created_at=null, modified_at=null)]
+2023-06-18T17:13:44.940+07:00  INFO 6396 --- [restartedMain] c.e.t.TiketkuFinalProjectApplication     : Starting TiketkuFinalProjectApplication using Java 17.0.2 with PID 6396 (D:\Materi Kuliah\!Binar Academy MSIB\Ch-8-9 Final Project\Tiketku-revisi-main\target\classes started by ARJ in D:\Materi Kuliah\!Binar Academy MSIB\Ch-8-9 Final Project\Tiketku-revisi-main)
+2023-06-18T17:13:44.951+07:00  INFO 6396 --- [restartedMain] c.e.t.TiketkuFinalProjectApplication     : No active profile set, falling back to 1 default profile: "default"
+2023-06-18T17:13:57.235+07:00  INFO 6396 --- [restartedMain] c.e.t.TiketkuFinalProjectApplication     : Started TiketkuFinalProjectApplication in 12.813 seconds (process running for 13.932)
+2023-06-18T17:14:20.302+07:00 ERROR 6396 --- [scheduling-1] o.s.s.s.TaskUtils$LoggingErrorHandler    : Unexpected error occurred in scheduled task
+
+org.springframework.dao.InvalidDataAccessApiUsageException: Executing an update/delete query
+	at org.springframework.orm.jpa.EntityManagerFactoryUtils.convertJpaAccessExceptionIfPossible(EntityManagerFactoryUtils.java:400) ~[spring-orm-6.0.7.jar:6.0.7]
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.translateExceptionIfPossible(HibernateJpaDialect.java:234) ~[spring-orm-6.0.7.jar:6.0.7]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.translateExceptionIfPossible(AbstractEntityManagerFactoryBean.java:550) ~[spring-orm-6.0.7.jar:6.0.7]
+	at org.springframework.dao.support.ChainedPersistenceExceptionTranslator.translateExceptionIfPossible(ChainedPersistenceExceptionTranslator.java:61) ~[spring-tx-6.0.7.jar:6.0.7]
+	at org.springframework.dao.support.DataAccessUtils.translateIfNecessary(DataAccessUtils.java:242) ~[spring-tx-6.0.7.jar:6.0.7]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:152) ~[spring-tx-6.0.7.jar:6.0.7]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.0.7.jar:6.0.7]
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:134) ~[spring-data-jpa-3.0.4.jar:3.0.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.0.7.jar:6.0.7]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97) ~[spring-aop-6.0.7.jar:6.0.7]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.0.7.jar:6.0.7]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:218) ~[spring-aop-6.0.7.jar:6.0.7]
+	at jdk.proxy4/jdk.proxy4.$Proxy151.resetLimit(Unknown Source) ~[na:na]
+	at com.example.tiketku_finalproject.Service.SchedulesService.resetLimits(SchedulesService.java:60) ~[classes/:na]
+	at com.example.tiketku_finalproject.Schedule.Scheduler.Schedule(Scheduler.java:53) ~[classes/:na]
+	at jdk.internal.reflect.GeneratedMethodAccessor61.invoke(Unknown Source) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:84) ~[spring-context-6.0.7.jar:6.0.7]
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54) ~[spring-context-6.0.7.jar:6.0.7]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305) ~[na:na]
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+Caused by: jakarta.persistence.TransactionRequiredException: Executing an update/delete query
+	at org.hibernate.internal.AbstractSharedSessionContract.checkTransactionNeededForUpdateOperation(AbstractSharedSessionContract.java:451) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
+	at org.hibernate.query.sqm.internal.QuerySqmImpl.executeUpdate(QuerySqmImpl.java:694) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.orm.jpa.SharedEntityManagerCreator$DeferredQueryInvocationHandler.invoke(SharedEntityManagerCreator.java:405) ~[spring-orm-6.0.7.jar:6.0.7]
+	at jdk.proxy4/jdk.proxy4.$Proxy171.executeUpdate(Unknown Source) ~[na:na]
+	at org.springframework.data.jpa.repository.query.JpaQueryExecution$ModifyingExecution.doExecute(JpaQueryExecution.java:236) ~[spring-data-jpa-3.0.4.jar:3.0.4]
+	at org.springframework.data.jpa.repository.query.JpaQueryExecution.execute(JpaQueryExecution.java:90) ~[spring-data-jpa-3.0.4.jar:3.0.4]
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.doExecute(AbstractJpaQuery.java:148) ~[spring-data-jpa-3.0.4.jar:3.0.4]
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.execute(AbstractJpaQuery.java:136) ~[spring-data-jpa-3.0.4.jar:3.0.4]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:136) ~[spring-data-commons-3.0.4.jar:3.0.4]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:120) ~[spring-data-commons-3.0.4.jar:3.0.4]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:164) ~[spring-data-commons-3.0.4.jar:3.0.4]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:143) ~[spring-data-commons-3.0.4.jar:3.0.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.0.7.jar:6.0.7]
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:77) ~[spring-data-commons-3.0.4.jar:3.0.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.0.7.jar:6.0.7]
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123) ~[spring-tx-6.0.7.jar:6.0.7]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:391) ~[spring-tx-6.0.7.jar:6.0.7]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-6.0.7.jar:6.0.7]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.0.7.jar:6.0.7]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137) ~[spring-tx-6.0.7.jar:6.0.7]
+	... 20 common frames omitted
+
+2023-06-18T17:23:01.929+07:00  INFO 12388 --- [restartedMain] c.e.t.TiketkuFinalProjectApplication     : Starting TiketkuFinalProjectApplication using Java 17.0.2 with PID 12388 (D:\Materi Kuliah\!Binar Academy MSIB\Ch-8-9 Final Project\Tiketku-revisi-main\target\classes started by ARJ in D:\Materi Kuliah\!Binar Academy MSIB\Ch-8-9 Final Project\Tiketku-revisi-main)
+2023-06-18T17:23:01.932+07:00  INFO 12388 --- [restartedMain] c.e.t.TiketkuFinalProjectApplication     : No active profile set, falling back to 1 default profile: "default"
+2023-06-18T17:23:12.779+07:00  INFO 12388 --- [restartedMain] c.e.t.TiketkuFinalProjectApplication     : Started TiketkuFinalProjectApplication in 11.366 seconds (process running for 12.345)
+2023-06-18T17:25:44.717+07:00  INFO 23208 --- [restartedMain] c.e.t.TiketkuFinalProjectApplication     : Starting TiketkuFinalProjectApplication using Java 17.0.2 with PID 23208 (D:\Materi Kuliah\!Binar Academy MSIB\Ch-8-9 Final Project\Tiketku-revisi-main\target\classes started by ARJ in D:\Materi Kuliah\!Binar Academy MSIB\Ch-8-9 Final Project\Tiketku-revisi-main)
+2023-06-18T17:25:44.721+07:00  INFO 23208 --- [restartedMain] c.e.t.TiketkuFinalProjectApplication     : No active profile set, falling back to 1 default profile: "default"
+2023-06-18T17:25:53.492+07:00  INFO 23208 --- [restartedMain] c.e.t.TiketkuFinalProjectApplication     : Started TiketkuFinalProjectApplication in 9.37 seconds (process running for 10.478)
+2023-06-18T17:27:38.406+07:00  INFO 15340 --- [restartedMain] c.e.t.TiketkuFinalProjectApplication     : Starting TiketkuFinalProjectApplication using Java 17.0.2 with PID 15340 (D:\Materi Kuliah\!Binar Academy MSIB\Ch-8-9 Final Project\Tiketku-revisi-main\target\classes started by ARJ in D:\Materi Kuliah\!Binar Academy MSIB\Ch-8-9 Final Project\Tiketku-revisi-main)
+2023-06-18T17:27:38.408+07:00  INFO 15340 --- [restartedMain] c.e.t.TiketkuFinalProjectApplication     : No active profile set, falling back to 1 default profile: "default"
+2023-06-18T17:27:47.625+07:00  INFO 15340 --- [restartedMain] c.e.t.TiketkuFinalProjectApplication     : Started TiketkuFinalProjectApplication in 9.722 seconds (process running for 10.928)

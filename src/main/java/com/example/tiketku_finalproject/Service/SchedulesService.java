@@ -56,6 +56,10 @@ public class SchedulesService {
         return schedules;
     }
 
+    /*public void resetLimits() {
+        schedulesRepository.resetLimit();
+    }*/
+
 //    public List<SchedulesEntity> searchTiket(String departure_city, String arrival_city, Date departure_date, Integer total_passenger) {
 //        List<Object[]> results = schedulesRepository.searching(departure_city, arrival_city, departure_date, total_passenger);
 //        List<SchedulesEntity> schedules = new ArrayList<>();
