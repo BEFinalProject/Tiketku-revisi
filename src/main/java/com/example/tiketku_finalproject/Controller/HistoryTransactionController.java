@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.sql.Date;
 import java.util.List;
 import java.util.UUID;
 
@@ -35,6 +36,22 @@ public class HistoryTransactionController {
             log.info(String.valueOf(historyTransaction));
 
             if(!historyTransaction.isEmpty()) {
+                return commonResponseGenerator.succsesResponse(historyTransaction,"Sukses Mencari Jadwal Transaction");
+            }else {
+                return commonResponseGenerator.succsesResponse(historyTransaction, "Data tidak ditemukan");
+            }
+        } catch (Exception e) {
+            log.warn(String.valueOf(e));
+            return commonResponseGenerator.failedResponse(e.getMessage());
+        }
+    }
+    @GetMapping(value = "/date/{departure_date}/{uuid_user}")
+    @Operation(description = "Menampilkan Tanggal Transaksi")
+    public CommonResponse<List<HistoryTransactionEntity>> getHistory(@PathVariable Date departure_date, @PathVariable UUID uuid_user){
+        try {
+            List<HistoryTransactionEntity> historyTransaction = historyTransactionService.searchHistoryByDateAndUUIDUsers(departure_date,uuid_user);
+            log.info(String.valueOf(historyTransaction));
+            if (!historyTransaction.isEmpty()) {
                 return commonResponseGenerator.succsesResponse(historyTransaction,"Sukses Mencari Jadwal Transaction");
             }else {
                 return commonResponseGenerator.succsesResponse(historyTransaction, "Data tidak ditemukan");
