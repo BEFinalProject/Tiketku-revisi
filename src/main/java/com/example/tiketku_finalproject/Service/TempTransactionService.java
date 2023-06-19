@@ -61,10 +61,10 @@ public class TempTransactionService {
             transactionExist.setArrival_airport(routes.getArrival_airport());
             transactionExist.setDeparture_city(routes.getDeparture_city());
             transactionExist.setArrival_city(routes.getArrival_city());
-//            transactionExist.setDeparture_date(routes.getDeparture_date());
-//            transactionExist.setDeparture_time(routes.getDeparture_time());
-//            transactionExist.setArrival_date(routes.getArrival_date());
-//            transactionExist.setArrival_time(routes.getArrival_time());
+            transactionExist.setDeparture_date(routes.getDeparture_date()); // ini
+            transactionExist.setDeparture_time(routes.getDeparture_time());
+            transactionExist.setArrival_date(routes.getArrival_date());
+            transactionExist.setArrival_time(routes.getArrival_time()); // sampe sini
             transactionExist.setSeats_id(seats.getSeats_id());
             transactionExist.setPrice(seats.getPrice());
             transactionExist.setSeat_type(seats.getSeat_type());
