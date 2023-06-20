@@ -7,7 +7,10 @@ import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 import java.sql.Date;
+<<<<<<< HEAD
 import java.time.LocalDateTime;
+=======
+>>>>>>> 9767d46c3151a5641f292793d2dd49314189e35a
 import java.util.List;
 import java.util.UUID;
 
@@ -19,7 +22,10 @@ public interface HistoryTransactionRepository extends JpaRepository<HistoryTrans
     List<HistoryTransactionEntity> findByDepartureDate(@Param("departure_date") Date departure_date, @Param("uuid_user")UUID uuid_user);
     @Query("SELECT h FROM HistoryTransactionEntity h WHERE h.uuid_user = :uuid_user AND h.uuid_history = :uuid_history")
     List<HistoryTransactionEntity> findByUUIDUserAndHistory(@Param("uuid_user") UUID uuid_user, @Param("uuid_history")UUID uuid_history);
+<<<<<<< HEAD
 
     @Query("SELECT SUM(h.price) AS total_price, COUNT(*) AS total_passanger FROM HistoryTransactionEntity h WHERE h.uuid_user = :uuid_users and h.created_at = :created_at and h.status = 'Unpaid'")
     List<Object[]> findTotalPriceAndPassangerByUUIDUserAndCreatedAt(@Param("uuid_users") UUID uuid_users, @Param("created_at") LocalDateTime created_at);
+=======
+>>>>>>> 9767d46c3151a5641f292793d2dd49314189e35a
 }
