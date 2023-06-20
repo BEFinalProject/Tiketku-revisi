@@ -122,13 +122,9 @@ public class HistoryTransactionService {
             throw new RuntimeException("History Transaksi tidak ditemukan");
         }
 
-<<<<<<< HEAD
 
         HistoryTransactionEntity historyData = new HistoryTransactionEntity();
 
-=======
-        HistoryTransactionEntity historyData = new HistoryTransactionEntity();
->>>>>>> 9767d46c3151a5641f292793d2dd49314189e35a
         historyData.setUuid_history(transaction.getUuid_transaction());
         historyData.setUuid_schedules(transaction.getUuid_schedules());
         historyData.setUuid_user(transaction.getUuid_user());
@@ -205,7 +201,6 @@ public class HistoryTransactionService {
         return historyTransactionRepository.save(historyData);
     }
 
-<<<<<<< HEAD
     public List<TransactionSummaryResponse> SearchPriceAndTotalPassanger(UUID uuid_users, LocalDateTime created_at) {
         List<Object[]> results = historyTransactionRepository.findTotalPriceAndPassangerByUUIDUserAndCreatedAt(uuid_users, created_at);
         List<TransactionSummaryResponse> summaries = new ArrayList<>();
@@ -220,6 +215,4 @@ public class HistoryTransactionService {
 
         return summaries;
     }
-=======
->>>>>>> 9767d46c3151a5641f292793d2dd49314189e35a
 }

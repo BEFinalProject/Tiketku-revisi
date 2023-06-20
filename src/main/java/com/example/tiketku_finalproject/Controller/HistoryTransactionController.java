@@ -3,29 +3,20 @@ package com.example.tiketku_finalproject.Controller;
 import com.example.tiketku_finalproject.Model.HistoryTransactionEntity;
 import com.example.tiketku_finalproject.Response.CommonResponse;
 import com.example.tiketku_finalproject.Response.CommonResponseGenerator;
-<<<<<<< HEAD
 import com.example.tiketku_finalproject.Response.TransactionSummaryResponse;
-=======
->>>>>>> 9767d46c3151a5641f292793d2dd49314189e35a
 import com.example.tiketku_finalproject.Service.HistoryTransactionService;
 import io.swagger.annotations.Api;
 import io.swagger.v3.oas.annotations.Operation;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-<<<<<<< HEAD
 import org.springframework.format.annotation.DateTimeFormat;
-=======
->>>>>>> 9767d46c3151a5641f292793d2dd49314189e35a
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.sql.Date;
-<<<<<<< HEAD
 import java.time.LocalDateTime;
-=======
->>>>>>> 9767d46c3151a5641f292793d2dd49314189e35a
 import java.util.List;
 import java.util.UUID;
 
@@ -90,7 +81,6 @@ public class HistoryTransactionController {
             return commonResponseGenerator.failedResponse(e.getMessage());
         }
     }
-<<<<<<< HEAD
     @GetMapping(value = "/Total/{uuid_users}/{created_at}")
     @Operation(description = "Menampilkan Tanggal Transaksi")
     public CommonResponse<List<TransactionSummaryResponse>> getPriceAndTotalPassanger(@PathVariable UUID uuid_users, @PathVariable @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss") LocalDateTime created_at) {
@@ -103,6 +93,4 @@ public class HistoryTransactionController {
             return commonResponseGenerator.failedResponse(e.getMessage());
         }
     }
-=======
->>>>>>> 9767d46c3151a5641f292793d2dd49314189e35a
 }
