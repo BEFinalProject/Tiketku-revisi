@@ -3,10 +3,14 @@ package com.example.tiketku_finalproject;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
+import org.springframework.scheduling.annotation.EnableScheduling;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 @SpringBootApplication
+@EnableScheduling
+@EnableTransactionManagement
 public class TiketkuFinalProjectApplication {
 
 	public static void main(String[] args) {
@@ -21,7 +25,7 @@ public class TiketkuFinalProjectApplication {
 				registry.addMapping("/**")
 						.allowedOrigins(
 								"http://localhost:8080", //ini portnya sesuai dari railway
-								"http://localhost:3001",
+								"http://localhost:8081",
 								"https://binar-backend-final-project-production.up.railway.app",
 								"*");
 			}

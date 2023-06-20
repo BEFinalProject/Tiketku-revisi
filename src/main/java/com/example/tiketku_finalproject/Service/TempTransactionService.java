@@ -61,10 +61,10 @@ public class TempTransactionService {
             transactionExist.setArrival_airport(routes.getArrival_airport());
             transactionExist.setDeparture_city(routes.getDeparture_city());
             transactionExist.setArrival_city(routes.getArrival_city());
-//            transactionExist.setDeparture_date(routes.getDeparture_date());
-//            transactionExist.setDeparture_time(routes.getDeparture_time());
-//            transactionExist.setArrival_date(routes.getArrival_date());
-//            transactionExist.setArrival_time(routes.getArrival_time());
+            transactionExist.setDeparture_date(routes.getDeparture_date()); // ini
+            transactionExist.setDeparture_time(routes.getDeparture_time());
+            transactionExist.setArrival_date(routes.getArrival_date());
+            transactionExist.setArrival_time(routes.getArrival_time()); // sampe sini
             transactionExist.setSeats_id(seats.getSeats_id());
             transactionExist.setPrice(seats.getPrice());
             transactionExist.setSeat_type(seats.getSeat_type());
@@ -74,6 +74,17 @@ public class TempTransactionService {
         }
 
         return savedTransactions;
+    }
+
+    public TempTransactionEntity updateTempData(TempTransactionEntity tempTransaction){
+        TempTransactionEntity updatedTempData = tempTransactionRepository.findById(tempTransaction.getUuid_transaction()).get();
+        updatedTempData.setTitle(tempTransaction.getTitle());
+        updatedTempData.setFull_name(tempTransaction.getFull_name());
+        updatedTempData.setGiven_name(tempTransaction.getGiven_name());
+        updatedTempData.setBirth_date(tempTransaction.getBirth_date());
+        updatedTempData.setId_card(tempTransaction.getId_card());
+        updatedTempData.setValid_until(tempTransaction.getDeparture_date());
+        return tempTransactionRepository.save(updatedTempData);
     }
 
 //    public List<TempTransactionEntity> addTransaction(List<TempTransactionEntity> tempTransactions) {

@@ -3,6 +3,7 @@ package com.example.tiketku_finalproject.Repository;
 import com.example.tiketku_finalproject.Model.SchedulesEntity;
 import com.example.tiketku_finalproject.Model.TempTransactionEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
@@ -29,4 +30,9 @@ public interface SchedulesRepository extends JpaRepository<SchedulesEntity, UUID
                                  @Param("arrival_city") String arrival_city,
                                  @Param("departure_date") Date departure_date,
                                  @Param("total_passenger") int total_passenger);
+
+        /*@Modifying
+        @Query("UPDATE SchedulesEntity s SET s.limits = 30")
+        void resetLimit();*/
+
 }

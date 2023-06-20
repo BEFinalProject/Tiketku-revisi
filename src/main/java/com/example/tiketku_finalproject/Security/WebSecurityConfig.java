@@ -50,7 +50,7 @@ public class WebSecurityConfig{
                 .csrf()
                 .disable()
                 .authorizeHttpRequests()
-                .requestMatchers("/Schedules/**","/TempTransacation/**","/HistoryTransaction/**","/Users/**","/swagger-ui/**","/v3/api-docs/**").permitAll()
+                .requestMatchers("/Airplane/**","/Airport/**","/Schedules/**","/TempTransacation/**","/HistoryTransaction/**","/Users/**","/swagger-ui/**","/v3/api-docs/**").permitAll()
 //                .anyRequest().authenticated().and().httpBasic() formLogin()
                 .and().authorizeHttpRequests().requestMatchers("/City/findCityTicket","/Film/**","/Jadwal/**","/Report/**","/Transaction/**","/DataTransaction/**").authenticated().and().sessionManagement()
                 .sessionCreationPolicy(SessionCreationPolicy.STATELESS).and().authenticationProvider(authenticationProvider())
