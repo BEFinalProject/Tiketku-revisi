@@ -28,10 +28,8 @@ public class HistoryTransactionEntity {
     private String arrival_airport;
     private String departure_city;
     private String arrival_city;
-    private java.util.Date departure_date;
-    private Time departure_time;
-    private java.util.Date arrival_date;
-    private Time arrival_time;
+    private LocalDateTime departure_time;
+    private LocalDateTime arrival_time;
     private int price;
     private String seat_type;
     private String title;
@@ -39,7 +37,7 @@ public class HistoryTransactionEntity {
     private String given_name;
     private java.util.Date birth_date;
     private String id_card;
-    private Date valid_until;
+    private LocalDateTime valid_until;
     private String status;
     @JsonIgnore
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")

@@ -28,10 +28,8 @@ public class TempTransactionEntity {
     private String arrival_airport;
     private String departure_city;
     private String arrival_city;
-    private Date departure_date;
-    private Time departure_time;
-    private Date arrival_date;
-    private Time arrival_time;
+    private LocalDateTime departure_time;
+    private LocalDateTime arrival_time;
     private int price;
     private int seats_id;
     private String seat_type;
@@ -40,7 +38,7 @@ public class TempTransactionEntity {
     private String given_name;
     private Date birth_date;
     private String id_card;
-    private Date valid_until;
+    private LocalDateTime valid_until;
     @JsonIgnore
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private LocalDateTime created_at;

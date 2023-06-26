@@ -2,6 +2,7 @@ package com.example.tiketku_finalproject.Schedule;
 
 import com.example.tiketku_finalproject.Model.SchedulesEntity;
 import com.example.tiketku_finalproject.Repository.SchedulesRepository;
+import com.example.tiketku_finalproject.Service.TempTransactionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
@@ -13,6 +14,8 @@ public class ScheduleUpdateScheduler {
 
     @Autowired
     private SchedulesRepository schedulesRepository;
+    @Autowired
+    private TempTransactionService tempTransactionService;
 
     @Scheduled(cron = "0 0 0 * * *") // Menjadwalkan untuk dijalankan setiap pukul 00:00:00 sore hari
     public void updateScheduleData() {
@@ -22,6 +25,7 @@ public class ScheduleUpdateScheduler {
         for (SchedulesEntity schedule : schedules) {
             schedule.setLimits(30);
             schedulesRepository.save(schedule);
+            tempTransactionService.truncate();
         }
     }
 }

@@ -1,5 +1,6 @@
 package com.example.tiketku_finalproject.Controller;
 
+import com.example.tiketku_finalproject.Model.AirportsEntity;
 import com.example.tiketku_finalproject.Model.UsersEntity;
 import com.example.tiketku_finalproject.Response.*;
 import com.example.tiketku_finalproject.Service.JwtService;
@@ -35,6 +36,9 @@ public class UserController {
     CommonResponseGenerator urg;
 
     @Autowired
+    RegisterResponse registerResponse;
+
+    @Autowired
     private JwtService jwtService;
     @Autowired
     private AuthenticationManager authenticationManager;
@@ -42,7 +46,8 @@ public class UserController {
     @Autowired
     private PasswordEncoder passwordEncoder;
 
-    @PostMapping(value = "/Login")
+    @PostMapping(value = "/login")
+    @Operation(description = "Login")
     public CommonResponse<String> authenticateAndGetToken(@RequestBody AuthRequest authRequest){
         try{
             Authentication authentication = authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(authRequest.getEmail(), authRequest.getPassword()));
@@ -65,9 +70,9 @@ public class UserController {
         }
     }
 
-    @PostMapping("/Register")
-    @Operation(description = "Menambahkan User Tertentu Dari Database")
-    public CommonResponse<UsersEntity> addUsers(@RequestBody RegisterRequest param) {
+    @PostMapping("/register")
+    @Operation(description = "Register")
+    public CommonRegisterResponse<UsersEntity> addUsers(@RequestBody RegisterRequest param) {
         try {
             UsersEntity regUser = new UsersEntity();
             regUser.setEmail(param.getEmail());
@@ -79,15 +84,15 @@ public class UserController {
             regUser.setToken(jwtService.generateToken(param.getEmail()));
             UsersEntity user = us.addUsers(regUser);
             log.info(String.valueOf(user), "Sukses Menambahkan Data " + user.getUuid_user());
-            return urg.succsesResponse(user, "Sukses Menambahkan Data");
+            return registerResponse.succsesResponse("Sukses Menambahkan Data");
         } catch (Exception e) {
             log.warn(String.valueOf(e));
-            return urg.failedResponse(e.getMessage());
+            return registerResponse.failedResponse(e.getMessage());
         }
     }
 
-    @PutMapping("/ResetPassword")
-    @Operation(description = "User Melakukan Reset Password")
+    @PutMapping("/resetPassword")
+    @Operation(description = "Reset Password")
     public CommonResponse<UsersEntity> validatePassword(@RequestBody ResetPasswordRequest resetPasswordRequest){
         try {
             UsersEntity userReset = new UsersEntity();
@@ -102,10 +107,30 @@ public class UserController {
             return urg.failedResponse(e.getMessage());
         }
     }
+    @PutMapping(value = "/updateUser")
+    @Operation(description = "Update User")
+    //@PreAuthorize("hasAuthority('ROLE_USERS')")
+    public CommonResponse<UsersEntity> updateUser(@RequestBody UpdateUserResponse update){
+        try {
+            UsersEntity userUpdate = us.getById(update.getUuid_user());
+            userUpdate.setUuid_user(userUpdate.getUuid_user());
+            userUpdate.setEmail(update.getEmail());
+            userUpdate.setFull_name(update.getFull_name());
+            userUpdate.setPhone(update.getPhone());
+            userUpdate.setGender(update.getGender());
+            UsersEntity user = us.updateUser(userUpdate);
+            log.info(String.valueOf(user),"Sukses Update Data " +user.getUuid_user());
+            return urg.succsesResponse(user,"Sukses Update Data " +user.getUuid_user());
+        }
+        catch (Exception e){
+            log.warn(String.valueOf(e));
+            return urg.failedResponse(e.getMessage());
+        }
 
+    }
 
     @GetMapping()
-    @Operation(description = "Menampilkan Semua Users")
+    @Operation(description = "Search All Users")
     //@PreAuthorize("hasAuthority('ROLE_ADMIN')")
     public CommonResponse<ResponseEntity<List<UsersEntity>>> getAll(
             @RequestParam(defaultValue = "0")int pageNumber,
@@ -130,7 +155,7 @@ public class UserController {
     }
 
     @GetMapping(value = "/findUser/{id_user}") //yang ada di dalam {} disamakan dengan
-    @Operation(description = "Mencari User Berdasarkan ID User")
+    @Operation(description = "Find Users By Id")
     //@PreAuthorize("hasAuthority('ROLE_ADMIN')")
     public CommonResponse<UsersEntity> getById(@PathVariable UUID id_user){ // yang ini "id_user"
         try {
@@ -145,25 +170,10 @@ public class UserController {
 
     }
 
-    @PutMapping(value = "/updateUser")
-    @Operation(description = "Mengupdate Users Tertentu Dari Database")
-    //@PreAuthorize("hasAuthority('ROLE_USERS')")
-    public CommonResponse<UsersEntity> updateUser(@RequestBody UsersEntity param){
 
-        try {
-            UsersEntity user = us.updateUser(param);
-            log.info(String.valueOf(user),"Sukses Update Data " +user.getUuid_user());
-            return urg.succsesResponse(user,"Sukses Update Data " +user.getUuid_user());
-        }
-        catch (Exception e){
-            log.warn(String.valueOf(e));
-            return urg.failedResponse(e.getMessage());
-        }
-
-    }
 
     @DeleteMapping(value = "/deleteUser/{id_user}")
-    @Operation(description = "Menghapus Users Tertentu Dari Database Berdasarkan ID User")
+    @Operation(description = "Delete User By Id")
     //@PreAuthorize("hasAuthority('ROLE_USERS')")
     public CommonResponse<UsersEntity> deleteUser(@PathVariable UUID id_user){
         try {

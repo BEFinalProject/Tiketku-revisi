@@ -19,23 +19,6 @@ public class SwaggerConfig {
                 .title("Dokumentasi 'Tiketku' Tiket Booking Pesawat Online")
                 .version(appVersion).description(appDescription).termsOfService("http://swagger.io/terms/")
                 .license(new License().name("Apache 2.0").url("http://springdoc.org")));
-//        return new Docket(DocumentationType.SWAGGER_2).select().apis(RequestHandlerSelectors.any())
-//                .paths(PathSelectors.any()).build().apiInfo(apinfo());
-//        JasperPrint jasperPrint = JasperFillManager.fillReport("asd");
     }
 
-    //untuk judul dokumentasi
-//    private ApiInfo apinfo(){
-//        ApiInfo apiInfo = new ApiInfo(
-//                "Dokumentasi Reservasi Tiket Bioskop Online",
-//                "Challange Chapter 5 Dokumentasi",
-//                "API TOS",
-//                "Terms of Service",
-//                new Contact("Diva Juan Nur Taqarrub","","divajuan12345@gmail.com"),
-//                "Apache License",
-//                "www.apache.com",
-//                Collections.emptyList()
-//        );
-//        return apiInfo;
-//    }
 }

@@ -5,8 +5,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import lombok.Data;
 
-import java.sql.Time;
-import java.util.Date;
+import java.time.LocalDateTime;
 import java.util.UUID;
 
 @Entity
@@ -23,8 +22,6 @@ public class RoutesEntity {
     private String departure_airport;
     private String arrival_airport_code;
     private String arrival_airport;
-    private Date departure_date;
-    private Time departure_time;
-    private Date arrival_date;
-    private Time arrival_time;
+    private LocalDateTime departure_time;
+    private LocalDateTime arrival_time;
 }

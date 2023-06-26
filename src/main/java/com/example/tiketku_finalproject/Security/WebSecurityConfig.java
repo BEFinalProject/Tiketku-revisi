@@ -31,26 +31,16 @@ public class WebSecurityConfig{
 //        UserDetails admin = User.withUsername("diva").password("juan").roles("ADMIN").build();
 //        UserDetails user = User.withUsername("j").password("j").roles("USER").build();
 //        return new InMemoryUserDetailsManager(admin,user);
-        //atas ini kalo secara manual, yang bawah secara Database
+        //atas ini kalo secara manual, yang bawah secara Database.
         return new UserInfoUserDetailsService();
     }
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity) throws Exception {
-//        return httpSecurity
-//                .csrf()
-//                .disable()
-//                .authorizeHttpRequests()
-//                .requestMatchers("/Film","/Jadwal","/Seats","/Studio",
-//                        "/Film/Judul-Film/{film_name}","/Film/Tayang","/Film/Jadwal/{film_name}","/Seats/Studios/{studio}/{nomor_kursi}","/swagger-ui/**","/v3/api-docs/**","/Auth/**","/Kafka/**","/Kafka/Post").permitAll()
-////                .anyRequest().authenticated().and().httpBasic() formLogin()
-//                .and().authorizeHttpRequests().requestMatchers("/Users/**","/Film/**","/Jadwal/**","/Report/**","/Transaction/**","/DataTransaction/**").authenticated().and().sessionManagement()
-//                .sessionCreationPolicy(SessionCreationPolicy.STATELESS).and().authenticationProvider(authenticationProvider())
-//                .addFilterBefore(jwtAuthFilter, UsernamePasswordAuthenticationFilter.class).build();
         return httpSecurity
                 .csrf()
                 .disable()
                 .authorizeHttpRequests()
-                .requestMatchers("/Airplane/**","/Airport/**","/Schedules/**","/TempTransacation/**","/HistoryTransaction/**","/Users/**","/swagger-ui/**","/v3/api-docs/**").permitAll()
+                .requestMatchers("/Routes/**","/Airplane/**","/Airport/**","/Schedules/**","/TempTransaction/**","/HistoryTransaction/**","/Users/**","/swagger-ui/**","/v3/api-docs/**").permitAll()
 //                .anyRequest().authenticated().and().httpBasic() formLogin()
                 .and().authorizeHttpRequests().requestMatchers("/City/findCityTicket","/Film/**","/Jadwal/**","/Report/**","/Transaction/**","/DataTransaction/**").authenticated().and().sessionManagement()
                 .sessionCreationPolicy(SessionCreationPolicy.STATELESS).and().authenticationProvider(authenticationProvider())

@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.3.final using JasperReports Library version 6.20.3-415f9428cffdb6805c6f85bbb29ebaf18813a2ab  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="TesRevisi" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="7a5c9b49-9dc5-422a-ac69-e92cf61ef530">
+    <style name="Title" forecolor="#FFFFFF" fontName="Times New Roman" fontSize="50" isBold="false"/>
+    <style name="SubTitle" forecolor="#CCCCCC" fontName="Times New Roman" fontSize="18" isBold="false"/>
+    <style name="Column header" forecolor="#666666" fontName="Times New Roman" fontSize="14" isBold="true"/>
+    <style name="Detail" mode="Transparent" fontName="Times New Roman"/>
+    <style name="Row" mode="Transparent" fontName="Times New Roman" pdfFontName="Times-Roman">
+        <conditionalStyle>
+            <conditionExpression><![CDATA[$V{REPORT_COUNT}%2 == 0]]></conditionExpression>
+            <style mode="Opaque" backcolor="#F0EFEF"/>
+        </conditionalStyle>
+    </style>
+    <!--<field name="passenger" class="java.lang.Integer">
+    </field>-->
+    <field name="airplane_name" class="java.lang.String">
+    </field>
+    <field name="departure_airport" class="java.lang.String">
+    </field>
+    <field name="arrival_airport" class="java.lang.String">
+    </field>
+    <field name="departure_city" class="java.lang.String">
+    </field>
+    <field name="arrival_city" class="java.lang.String">
+    </field>
+    <field name="departure_date" class="java.sql.Date">
+    </field>
+    <field name="departure_time" class="java.sql.Time">
+    </field>
+    <field name="arrival_date" class="java.sql.Date">
+    </field>
+    <field name="arrival_time" class="java.sql.Time">
+    </field>
+    <field name="seat_type" class="java.lang.String">
+    </field>
+    <field name="title" class="java.lang.String">
+    </field>
+    <field name="full_name" class="java.lang.String">
+    </field>
+    <field name="given_name" class="java.lang.String">
+    </field>
+    <field name="valid_until" class="java.sql.Date">
+    </field>
+    <background>
+        <band height="298" splitType="Stretch">
+            <frame>
+                <reportElement mode="Opaque" x="-20" y="252" width="842" height="46" backcolor="#E603FF" uuid="99427fbe-6893-47fb-9234-866ba8d23575"/>
+                <staticText>
+                    <reportElement x="735" y="0" width="76" height="20" forecolor="#FFFFFF" uuid="510055a1-5943-4a43-ac7c-11336a80a0e9"/>
+                    <text><![CDATA[Downloaded on]]></text>
+                </staticText>
+                <textField pattern="EEEEE dd MMMMM yyyy">
+                    <reportElement x="690" y="23" width="144" height="20" forecolor="#FFFFFF" uuid="816a8ea9-f3d7-4379-a4ba-eee67b790ec4"/>
+                    <textElement textAlignment="Right">
+                        <font size="12"/>
+                    </textElement>
+                    <textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+                </textField>
+                <textField textAdjust="StretchHeight">
+                    <reportElement style="Detail" positionType="Float" x="290" y="7" width="240" height="30" forecolor="#FFFFFF" uuid="d4c8c095-d852-43e6-a7ed-abe0c32f34dc">
+                        <property name="com.jaspersoft.studio.spreadsheet.connectionID" value="7d38787e-29f0-473f-8a4e-d8d90517da36"/>
+                    </reportElement>
+                    <textElement>
+                        <font size="20"/>
+                    </textElement>
+                    <textFieldExpression><![CDATA[$F{seat_type}]]></textFieldExpression>
+                </textField>
+                <textField textAdjust="StretchHeight">
+                    <reportElement style="Detail" positionType="Float" x="20" y="7" width="248" height="31" forecolor="#FFFFFF" uuid="7f10d8ce-7295-4ec8-ab8b-09374ec7e543">
+                        <property name="com.jaspersoft.studio.spreadsheet.connectionID" value="1749cfdc-647f-470f-958d-6c238a101f76"/>
+                    </reportElement>
+                    <textElement>
+                        <font size="20"/>
+                    </textElement>
+                    <textFieldExpression><![CDATA[$F{airplane_name}]]></textFieldExpression>
+                </textField>
+            </frame>
+            <staticText>
+                <reportElement style="Column header" x="220" y="174" width="110" height="18" forecolor="#000000" uuid="d88afd9c-8c61-44d1-9bde-4c97e7ef542a">
+                    <property name="com.jaspersoft.studio.spreadsheet.connectionID" value="f2ad9e0f-08aa-4e43-8209-670ccd0861c4"/>
+                </reportElement>
+                <textElement>
+                    <font isBold="false"/>
+                </textElement>
+                <text><![CDATA[ARRIVAL TIME :]]></text>
+            </staticText>
+            <staticText>
+                <reportElement style="Column header" x="0" y="174" width="133" height="18" forecolor="#000000" uuid="aed1b34f-1604-41a0-942e-05cfa5f23eb7">
+                    <property name="com.jaspersoft.studio.spreadsheet.connectionID" value="7e3ce696-7928-4ab5-9075-1db3763f0abb"/>
+                </reportElement>
+                <textElement>
+                    <font isBold="false"/>
+                </textElement>
+                <text><![CDATA[DEPARTURE TIME :]]></text>
+            </staticText>
+            <staticText>
+                <reportElement style="Column header" x="680" y="212" width="100" height="18" forecolor="#000000" uuid="444a79af-27c2-4556-b896-4efbdbc503b7">
+                    <property name="com.jaspersoft.studio.spreadsheet.connectionID" value="f83dd015-4db7-49fa-afbf-21ffd2f64ec5"/>
+                </reportElement>
+                <textElement>
+                    <font isBold="false"/>
+                </textElement>
+                <text><![CDATA[VALID UNTIL :]]></text>
+            </staticText>
+            <staticText>
+                <reportElement style="Column header" x="0" y="100" width="89" height="18" forecolor="#000000" uuid="a18d5027-d5ec-4a01-9ccd-2e2f1804754a">
+                    <property name="com.jaspersoft.studio.spreadsheet.connectionID" value="f798b674-2ba9-4580-9d53-3d8111ca05dc"/>
+                </reportElement>
+                <textElement>
+                    <font isBold="false"/>
+                </textElement>
+                <text><![CDATA[FROM :]]></text>
+            </staticText>
+            <staticText>
+                <reportElement style="Column header" x="220" y="100" width="53" height="18" forecolor="#000000" uuid="5c23687e-4d71-48ef-a5a0-d5a773b21501">
+                    <property name="com.jaspersoft.studio.spreadsheet.connectionID" value="0c0ec43c-fb1d-4128-8eee-e9f54cacbb18"/>
+                </reportElement>
+                <textElement>
+                    <font isBold="false"/>
+                </textElement>
+                <text><![CDATA[TO :]]></text>
+            </staticText>
+            <textField textAdjust="StretchHeight">
+                <reportElement style="Detail" positionType="Float" x="0" y="138" width="139" height="18" uuid="285bf916-f09f-485b-a882-011303271f6b">
+                    <property name="com.jaspersoft.studio.spreadsheet.connectionID" value="4bad1d1e-441a-47de-84cc-2c452bdd17b2"/>
+                </reportElement>
+                <textElement>
+                    <font size="14"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{departure_airport}]]></textFieldExpression>
+            </textField>
+            <textField textAdjust="StretchHeight">
+                <reportElement style="Detail" positionType="Float" x="220" y="138" width="119" height="18" uuid="dcc2f3f6-6533-41fd-b20b-64a05b37a2d3">
+                    <property name="com.jaspersoft.studio.spreadsheet.connectionID" value="49d54fa2-887b-4acc-9fd4-0e628cf916d9"/>
+                </reportElement>
+                <textElement>
+                    <font size="14"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{arrival_airport}]]></textFieldExpression>
+            </textField>
+            <textField textAdjust="StretchHeight">
+                <reportElement style="Detail" positionType="Float" x="0" y="119" width="139" height="18" uuid="56bbfb1e-9e7c-4bde-90db-7f75abe804af">
+                    <property name="com.jaspersoft.studio.spreadsheet.connectionID" value="f798b674-2ba9-4580-9d53-3d8111ca05dc"/>
+                </reportElement>
+                <textElement>
+                    <font size="14"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{departure_city}]]></textFieldExpression>
+            </textField>
+            <textField textAdjust="StretchHeight">
+                <reportElement style="Detail" positionType="Float" x="220" y="119" width="119" height="18" uuid="4b52e875-28e5-48cf-8e3c-f9826e9e7fd2">
+                    <property name="com.jaspersoft.studio.spreadsheet.connectionID" value="0c0ec43c-fb1d-4128-8eee-e9f54cacbb18"/>
+                </reportElement>
+                <textElement>
+                    <font size="14"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{arrival_city}]]></textFieldExpression>
+            </textField>
+            <textField textAdjust="StretchHeight">
+                <reportElement style="Detail" positionType="Float" x="0" y="200" width="121" height="18" uuid="a5dcee03-de95-4133-b716-4f2360a3522c">
+                    <property name="com.jaspersoft.studio.spreadsheet.connectionID" value="bcd0a310-9fe9-4c11-84ef-e473801bcabb"/>
+                </reportElement>
+                <textElement>
+                    <font size="14"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{departure_date}]]></textFieldExpression>
+            </textField>
+            <textField textAdjust="StretchHeight">
+                <reportElement style="Detail" positionType="Float" x="0" y="220" width="121" height="18" uuid="f07a6cd2-1952-4bf6-b4b6-9415490994d8">
+                    <property name="com.jaspersoft.studio.spreadsheet.connectionID" value="7e3ce696-7928-4ab5-9075-1db3763f0abb"/>
+                </reportElement>
+                <textElement>
+                    <font size="14"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{departure_time}]]></textFieldExpression>
+            </textField>
+            <textField textAdjust="StretchHeight">
+                <reportElement style="Detail" positionType="Float" x="220" y="200" width="110" height="18" uuid="97b4264b-7e78-4a61-b6d0-fca46a658ff4">
+                    <property name="com.jaspersoft.studio.spreadsheet.connectionID" value="2b0af289-01be-4ee8-a322-504107dd7157"/>
+                </reportElement>
+                <textElement>
+                    <font size="14"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{arrival_date}]]></textFieldExpression>
+            </textField>
+            <textField textAdjust="StretchHeight">
+                <reportElement style="Detail" positionType="Float" x="220" y="220" width="108" height="18" uuid="99f59bde-951c-432f-8918-504e4ed3873b">
+                    <property name="com.jaspersoft.studio.spreadsheet.connectionID" value="f2ad9e0f-08aa-4e43-8209-670ccd0861c4"/>
+                </reportElement>
+                <textElement>
+                    <font size="14"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{arrival_time}]]></textFieldExpression>
+            </textField>
+            <textField textAdjust="StretchHeight">
+                <reportElement style="Detail" positionType="Float" x="0" y="70" width="53" height="18" uuid="96211a99-e20c-4f41-8041-beaca2d051b4">
+                    <property name="com.jaspersoft.studio.spreadsheet.connectionID" value="9e01c4e3-6ed6-4001-bf95-a15e4c906e59"/>
+                </reportElement>
+                <textElement>
+                    <font size="14"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{title}]]></textFieldExpression>
+            </textField>
+            <textField textAdjust="StretchHeight">
+                <reportElement style="Detail" positionType="Float" x="53" y="70" width="96" height="18" uuid="ef7a34ea-eeed-4440-8ef9-6470a376cff2">
+                    <property name="com.jaspersoft.studio.spreadsheet.connectionID" value="ecf9917b-bcb3-47f2-a1db-a442e7a01ea6"/>
+                </reportElement>
+                <textElement>
+                    <font size="14"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{full_name}]]></textFieldExpression>
+            </textField>
+            <textField textAdjust="StretchHeight">
+                <reportElement style="Detail" positionType="Float" x="150" y="70" width="99" height="18" uuid="7719b60e-533f-4e1b-8f56-a865b242bd42">
+                    <property name="com.jaspersoft.studio.spreadsheet.connectionID" value="ba0e03b5-d4c3-481e-aa85-6073f6ce1d0d"/>
+                </reportElement>
+                <textElement>
+                    <font size="14"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{given_name}]]></textFieldExpression>
+            </textField>
+            <textField textAdjust="StretchHeight">
+                <reportElement style="Detail" positionType="Float" x="680" y="230" width="130" height="18" uuid="483792aa-bb66-46e1-9806-85010b5a5775">
+                    <property name="com.jaspersoft.studio.spreadsheet.connectionID" value="f83dd015-4db7-49fa-afbf-21ffd2f64ec5"/>
+                </reportElement>
+                <textElement>
+                    <font size="14"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{valid_until}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement style="Column header" x="0" y="52" width="53" height="18" forecolor="#000000" uuid="2a9d537f-d1a1-46e8-9bb6-ffa00c388d6d">
+                    <property name="com.jaspersoft.studio.spreadsheet.connectionID" value="9e01c4e3-6ed6-4001-bf95-a15e4c906e59"/>
+                </reportElement>
+                <textElement>
+                    <font isBold="false"/>
+                </textElement>
+                <text><![CDATA[NAME :]]></text>
+            </staticText>
+            <frame>
+                <reportElement mode="Opaque" x="-20" y="-20" width="842" height="66" backcolor="#E603FF" uuid="89b4366a-92c4-456b-82ff-8dd4be0948e4"/>
+                <staticText>
+                    <reportElement style="Title" x="50" y="0" width="170" height="66" uuid="bfd9b97c-7a05-494d-9ff4-3b8191d33069"/>
+                    <box topPadding="4" leftPadding="4" bottomPadding="4" rightPadding="4"/>
+                    <textElement verticalAlignment="Bottom">
+                        <font isBold="false"/>
+                    </textElement>
+                    <text><![CDATA[Tiketku]]></text>
+                </staticText>
+                <staticText>
+                    <reportElement style="Title" x="419" y="0" width="420" height="66" uuid="662aba5d-82cd-4f51-95ec-22ccef434d0d"/>
+                    <box topPadding="4" leftPadding="4" bottomPadding="4" rightPadding="4"/>
+                    <textElement verticalAlignment="Bottom">
+                        <font isBold="false"/>
+                    </textElement>
+                    <text><![CDATA[BOARDING PASS]]></text>
+                </staticText>
+            </frame>
+        </band>
+    </background>
+</jasperReport>

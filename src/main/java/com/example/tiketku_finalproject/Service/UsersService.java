@@ -66,24 +66,6 @@ public class UsersService {
         return R.save(param);
 
     }
-
-//    public List<UsersEntity> addMultipleUsers(List<UsersEntity> param) {
-//        List<UsersEntity> list = new ArrayList<>();
-//
-//        for(UsersEntity user : param){
-//            Optional<UsersEntity> userExsist = R.findById(user.getUid_user());
-//            if(userExsist.isPresent()){
-//                throw new RuntimeException("User ID " +user.getUid_user() + " Sudah Ada");
-//            }
-//            else{
-//                user.setPassword(passwordEncoder.encode(user.getPassword()));
-//                list.add(R.save(user));
-//            }
-//        }
-//        return list;
-//    }
-
-
     public UsersEntity delUser(UUID param){
         UsersEntity delete = R.findById(param).get();
         R.deleteById(param);
@@ -105,11 +87,6 @@ public class UsersService {
         if (passwordEncoder.matches(newPassword, user.getPassword())) {
             throw new RuntimeException("Password baru tidak boleh sama dengan password sebelumnya");
         }
-
-//        // Memeriksa apakah password sebelumnya sesuai
-//        if (!passwordEncoder.matches(currentPassword, user.getPassword())) {
-//            throw new RuntimeException("Password sebelumnya tidak sesuai");
-//        }
 
         // Mengubah password baru dan menyimpan perubahan
         user.setPassword(passwordEncoder.encode(newPassword));

@@ -1,12 +1,11 @@
 package com.example.tiketku_finalproject.Service;
 
 import com.example.tiketku_finalproject.Model.HistoryTransactionEntity;
-import com.example.tiketku_finalproject.Model.SchedulesEntity;
 import com.example.tiketku_finalproject.Model.TempTransactionEntity;
 import com.example.tiketku_finalproject.Repository.HistoryTransactionRepository;
-import com.example.tiketku_finalproject.Repository.SchedulesRepository;
 import com.example.tiketku_finalproject.Repository.TempTransactionRepository;
 import com.example.tiketku_finalproject.Repository.UsersRepository;
+import com.example.tiketku_finalproject.Response.TransactionSummaryResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -27,11 +26,15 @@ public class HistoryTransactionService {
     UsersRepository usersRepository;
     private LocalDateTime currentDateTime = LocalDateTime.now();
 
+    public List<HistoryTransactionEntity> findAll(){
+        return historyTransactionRepository.findAll();
+    }
+
     public List<HistoryTransactionEntity> searchHistoryUsers(UUID uuid_user){
         return historyTransactionRepository.findByUUIDUsers(uuid_user);
     }
-    public List<HistoryTransactionEntity> searchHistoryByDateAndUUIDUsers(Date departure_date, UUID uuid_users){
-        return historyTransactionRepository.findByDepartureDate(departure_date, uuid_users);
+    public List<HistoryTransactionEntity> searchHistoryByDateAndUUIDUsers(LocalDateTime departure_time, UUID uuid_users){
+        return historyTransactionRepository.findByDepartureDate(departure_time, uuid_users);
     }
     public List<HistoryTransactionEntity> searchHistoryByUUIDUserAndHistory(UUID uuid_user, UUID uuid_history){
         return historyTransactionRepository.findByUUIDUserAndHistory(uuid_user, uuid_history);
@@ -58,26 +61,20 @@ public class HistoryTransactionService {
             historyData.setArrival_airport(transaction.getArrival_airport());
             historyData.setDeparture_city(transaction.getDeparture_city());
             historyData.setArrival_city(transaction.getArrival_city());
-            historyData.setDeparture_date(transaction.getDeparture_date());
-            historyData.setArrival_date(transaction.getArrival_date());
             historyData.setDeparture_time(transaction.getDeparture_time());
             historyData.setArrival_time(transaction.getArrival_time());
             historyData.setPrice(transaction.getPrice());
             historyData.setSeat_type(transaction.getSeat_type());
             historyData.setCreated_at(transaction.getCreated_at());
-            historyData.setStatus("Unpaid");
+            historyData.setStatus("Checkout");
 
             savedHistory.add(historyTransactionRepository.save(historyData));
         }
 
-
-
         return savedHistory;
     }
 
-    public HistoryTransactionEntity updateDataHistory(HistoryTransactionEntity historyTransaction){
-//        TempTransactionEntity updateTempTranscation = tempTransactionRepository.findById(historyTransaction.getTransaction_uid()).get();
-//        updateTempTranscation.
+    public HistoryTransactionEntity unpaidOrder(HistoryTransactionEntity historyTransaction){
 
         TempTransactionEntity transaction = tempTransactionRepository.getReferenceById(historyTransaction.getUuid_history());
         HistoryTransactionEntity historyTransactionExists = historyTransactionRepository.findById(historyTransaction.getUuid_history()).orElse(null);
@@ -96,8 +93,41 @@ public class HistoryTransactionService {
         historyData.setArrival_airport(transaction.getArrival_airport());
         historyData.setDeparture_city(transaction.getDeparture_city());
         historyData.setArrival_city(transaction.getArrival_city());
-        historyData.setDeparture_date(transaction.getDeparture_date());
-        historyData.setArrival_date(transaction.getArrival_date());
+        historyData.setDeparture_time(transaction.getDeparture_time());
+        historyData.setArrival_time(transaction.getArrival_time());
+        historyData.setPrice(transaction.getPrice());
+        historyData.setSeat_type(transaction.getSeat_type());
+        historyData.setStatus("Unpaid");
+        historyData.setTitle(transaction.getTitle());
+        historyData.setFull_name(transaction.getFull_name());
+        historyData.setGiven_name(transaction.getGiven_name());
+        historyData.setBirth_date(transaction.getBirth_date());
+        historyData.setId_card(transaction.getId_card());
+        historyData.setValid_until(transaction.getDeparture_time());
+        historyData.setCreated_at(transaction.getCreated_at());
+        historyData.setModified_at(currentDateTime);
+        return historyTransactionRepository.save(historyData);
+    }
+
+    public HistoryTransactionEntity paidOrder(HistoryTransactionEntity historyTransaction){
+
+        TempTransactionEntity transaction = tempTransactionRepository.getReferenceById(historyTransaction.getUuid_history());
+        HistoryTransactionEntity historyTransactionExists = historyTransactionRepository.findById(historyTransaction.getUuid_history()).orElse(null);
+        if (historyTransactionExists == null) {
+            throw new RuntimeException("History Transaksi tidak ditemukan");
+        }
+
+        HistoryTransactionEntity historyData = new HistoryTransactionEntity();
+        historyData.setUuid_history(transaction.getUuid_transaction());
+        historyData.setUuid_schedules(transaction.getUuid_schedules());
+        historyData.setUuid_user(transaction.getUuid_user());
+        historyData.setPassenger(transaction.getPassenger());
+        historyData.setAirplane_name(transaction.getAirplane_name());
+        historyData.setAirplane_type(transaction.getAirplane_type());
+        historyData.setDeparture_airport(transaction.getDeparture_airport());
+        historyData.setArrival_airport(transaction.getArrival_airport());
+        historyData.setDeparture_city(transaction.getDeparture_city());
+        historyData.setArrival_city(transaction.getArrival_city());
         historyData.setDeparture_time(transaction.getDeparture_time());
         historyData.setArrival_time(transaction.getArrival_time());
         historyData.setPrice(transaction.getPrice());
@@ -108,7 +138,7 @@ public class HistoryTransactionService {
         historyData.setGiven_name(transaction.getGiven_name());
         historyData.setBirth_date(transaction.getBirth_date());
         historyData.setId_card(transaction.getId_card());
-        historyData.setValid_until(transaction.getDeparture_date());
+        historyData.setValid_until(transaction.getDeparture_time());
         historyData.setCreated_at(transaction.getCreated_at());
         historyData.setModified_at(currentDateTime);
         return historyTransactionRepository.save(historyData);
@@ -121,7 +151,9 @@ public class HistoryTransactionService {
             throw new RuntimeException("History Transaksi tidak ditemukan");
         }
 
+
         HistoryTransactionEntity historyData = new HistoryTransactionEntity();
+
         historyData.setUuid_history(transaction.getUuid_transaction());
         historyData.setUuid_schedules(transaction.getUuid_schedules());
         historyData.setUuid_user(transaction.getUuid_user());
@@ -132,8 +164,6 @@ public class HistoryTransactionService {
         historyData.setArrival_airport(transaction.getArrival_airport());
         historyData.setDeparture_city(transaction.getDeparture_city());
         historyData.setArrival_city(transaction.getArrival_city());
-        historyData.setDeparture_date(transaction.getDeparture_date());
-        historyData.setArrival_date(transaction.getArrival_date());
         historyData.setDeparture_time(transaction.getDeparture_time());
         historyData.setArrival_time(transaction.getArrival_time());
         historyData.setPrice(transaction.getPrice());
@@ -144,7 +174,7 @@ public class HistoryTransactionService {
         historyData.setGiven_name(transaction.getGiven_name());
         historyData.setBirth_date(transaction.getBirth_date());
         historyData.setId_card(transaction.getId_card());
-        historyData.setValid_until(transaction.getDeparture_date());
+        historyData.setValid_until(transaction.getDeparture_time());
         historyData.setCreated_at(transaction.getCreated_at());
         historyData.setModified_at(currentDateTime);
         return historyTransactionRepository.save(historyData);
@@ -179,8 +209,6 @@ public class HistoryTransactionService {
         historyData.setArrival_airport(transaction.getArrival_airport());
         historyData.setDeparture_city(transaction.getDeparture_city());
         historyData.setArrival_city(transaction.getArrival_city());
-        historyData.setDeparture_date(transaction.getDeparture_date());
-        historyData.setArrival_date(transaction.getArrival_date());
         historyData.setDeparture_time(transaction.getDeparture_time());
         historyData.setArrival_time(transaction.getArrival_time());
         historyData.setPrice(transaction.getPrice());
@@ -191,11 +219,25 @@ public class HistoryTransactionService {
         historyData.setGiven_name(transaction.getGiven_name());
         historyData.setBirth_date(transaction.getBirth_date());
         historyData.setId_card(transaction.getId_card());
-        historyData.setValid_until(transaction.getDeparture_date());
+        historyData.setValid_until(transaction.getDeparture_time());
         historyData.setCreated_at(transaction.getCreated_at());
         historyData.setModified_at(currentDateTime);
 
         return historyTransactionRepository.save(historyData);
     }
 
+    public List<TransactionSummaryResponse> SearchPriceAndTotalPassanger(UUID uuid_users, LocalDateTime created_at) {
+        List<Object[]> results = historyTransactionRepository.findTotalPriceAndPassangerByUUIDUserAndCreatedAt(uuid_users, created_at);
+        List<TransactionSummaryResponse> summaries = new ArrayList<>();
+
+        for (Object[] result : results) {
+            Long totalHarga = (Long) result[0];
+            Integer totalPenumpang = ((Long) result[1]).intValue();
+
+            TransactionSummaryResponse summary = new TransactionSummaryResponse(totalHarga, totalPenumpang);
+            summaries.add(summary);
+        }
+
+        return summaries;
+    }
 }

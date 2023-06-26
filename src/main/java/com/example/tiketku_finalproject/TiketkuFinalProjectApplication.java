@@ -25,8 +25,8 @@ public class TiketkuFinalProjectApplication {
 				registry.addMapping("/**")
 						.allowedOrigins(
 								"http://localhost:8080", //ini portnya sesuai dari railway
-								"http://localhost:3001",
-								"https://binar-backend-final-project-production.up.railway.app",
+								"http://localhost:8081",
+								"https://novel-tomatoes-production.up.railway.app",
 								"*");
 			}
 		};
